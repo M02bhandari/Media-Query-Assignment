@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            min-height: 100vh;
+            background-color: gainsboro;
+
+        }
+        .item{
+            background-color: rgb(37, 185, 128);
+            padding: 20px;
+            text-align: center;
+        
+        }
+        .Centre{
+            background-color: rgb(98, 194, 218);
+            color: white;
+        }
+        .right{
+            background-color: rgb(16, 228, 111);
+            color: white;
+        }
+        .Left{
+            background-color: rebeccapurple;
+            color: white;
+        }
+        .bottom{
+            background-color: rgb(238, 88, 230);
+            color: white;
+        }
+        /* Media Queries */
+        @media screen and (min-width: 768px) {
+            .grid-container{
+                grid-template-columns: repeat(3, 1fr);
+grid-template-areas:
+"Left Left Left " 
+"Centre right right"
+"bottom bottom bottom"
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+<div class="item Left"> BOX1</div>
+<div class="item Centre">BOX2</div>
+<div class="item right">BOX3</div>
+<div class="item bottom">BOX4</div>
+    </div>
+</body>
+</html>
